@@ -1,0 +1,9 @@
+version: '3.8'
+services:
+  telegram-api:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - BOT_TOKEN=${BOT_TOKEN}
+    restart: unless-stopped
